@@ -1,0 +1,5 @@
+- User model with name, email, password
+- Setup bootstrap
+- Setup header and footer
+- Style pages
+- create sign up page
