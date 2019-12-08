@@ -10,12 +10,18 @@
         <li class="nav-item active">
           <%= link_to("Home", root_path, class: "nav-link") %>
         </li>
+        <li class="nav-item active">
+          <%= link_to("Posts", posts_path, class: "nav-link") %>
+        </li>
         <% if logged_in? %>
           <li class="nav-item active">
             <%= link_to("Log out", logout_path, class: "nav-link", method: "delete") %>
           </li>
           <li class="nav-item">
             <span class="nav-link disabled"><%= "Hello #{current_user.name}!" if current_user  %></span>
+          </li>
+          <li class="nav-item">
+            <%= link_to("Create Post", new_post_path, class: "btn btn-success my-2 my-sm-0") %>
           </li>
         <% else %>
           <li class="nav-item active">

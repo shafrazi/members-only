@@ -1,0 +1,16 @@
+<h1>Create Post</h1>
+
+<div class="container">
+  <%= form_with(model: @post, local: true) do |f| %>
+    <%= render "shared/post_error_messages.html.erb" %>
+    <div class="form-group">
+      <%= f.label :title, "Title :" %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :content, "Content :" %>
+      <%= f.text_field :content, class: "form-control" %>
+    </div>
+    <%= f.submit class: "btn btn-primary"%>
+  <% end %>
+</div>

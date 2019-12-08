@@ -40,4 +40,11 @@ module SessionsHelper
       current_user = nil
     end
   end
+
+  def post_author(post)
+    if logged_in?
+      user = User.find_by(id: post.user_id)
+      user.name
+    end
+  end
 end

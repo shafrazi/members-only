@@ -1,0 +1,15 @@
+<h1>All posts</h1>
+
+<div class="container">
+  <ul class="posts">
+    <% @posts.each do |post| %>
+      <li>
+        <div class="card">
+          <h5 class="card-header"><%= post.title %></h5>
+          <div class="card-body"><%= post.content %></div>
+          <div class="card-footer text-muted">Posted by: <%= post_author(post) %></div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

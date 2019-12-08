@@ -3,3 +3,7 @@
 - Setup header and footer
 - Style pages
 - create sign up page
+- setup login
+- setup remember user
+- setup posts
+- setup authentication of posts
