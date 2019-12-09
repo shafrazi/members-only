@@ -7,7 +7,9 @@
         <div class="card">
           <h5 class="card-header"><%= post.title %></h5>
           <div class="card-body"><%= post.content %></div>
-          <div class="card-footer text-muted">Posted by: <%= post_author(post) %></div>
+          <% if logged_in? %>
+            <div class="card-footer text-muted">Posted by: <%= post_author(post) %></div>
+          <% end %>
         </div>
       </li>
     <% end %>
